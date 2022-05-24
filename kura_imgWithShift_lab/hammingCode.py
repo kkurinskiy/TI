@@ -164,21 +164,3 @@ def decode(encoded, fix_errors=True):
         for clean_char in [clean_chunk[i:i + 8] for i in range(len(clean_chunk)) if not i % 8]:
             decoded_value += chr(int(clean_char, 2))
     return decoded_value
-
-
-if __name__ == '__main__':
-    source = input('Укажите текст для кодирования/декодирования:')
-    print('Длина блока кодирования: {0}'.format(CHUNK_LENGTH))
-    print('Контрольные биты: {0}'.format(CHECK_BITS))
-    encoded = encode(source)
-    print('Закодированные данные: {0}'.format(encoded))
-    decoded = decode(encoded)
-    print('Результат декодирования: {0}'.format(decoded))
-    encoded_with_error = set_errors(encoded)
-    print('Допускаем ошибки в закодированных данных: {0}'.format(encoded_with_error))
-    diff_index_list = get_diff_index_list(encoded, encoded_with_error)
-    print('Допущены ошибки в битах: {0}'.format(diff_index_list))
-    decoded = decode(encoded_with_error, fix_errors=False)
-    print('Результат декодирования ошибочных данных без исправления ошибок: {0}'.format(decoded))
-    decoded = decode(encoded_with_error)
-    print('Результат декодирования ошибочных данных с исправлением ошибок: {0}'.format(decoded))

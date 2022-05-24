@@ -1,7 +1,5 @@
-from random import randint
 from tkinter import *
 from tkinter import filedialog
-from typing import List, Any
 
 from PIL import Image, ImageTk
 

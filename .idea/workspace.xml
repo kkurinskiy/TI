@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00451f5d-2e1c-4fda-a84c-da076b1205a2" name="Changes" comment="start">
-      <change afterPath="$PROJECT_DIR$/kura_imgWithShift_lab/hammingCode.py" afterDir="false" />
+    <list default="true" id="00451f5d-2e1c-4fda-a84c-da076b1205a2" name="Changes" comment="end img_lab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kura_imgWithShift_lab/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/kura_imgWithShift_lab/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kura_imgWithShift_lab/module.py" beforeDir="false" afterPath="$PROJECT_DIR$/kura_imgWithShift_lab/module.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +46,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HOME/PycharmProjects/pythonProject1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -171,7 +170,8 @@
       <workItem from="1653343766446" duration="119000" />
       <workItem from="1653343908465" duration="85000" />
       <workItem from="1653344008786" duration="5561000" />
-      <workItem from="1653380772272" duration="4477000" />
+      <workItem from="1653380772272" duration="4680000" />
+      <workItem from="1653393600053" duration="171000" />
     </task>
     <task id="LOCAL-00001" summary="add img_lab">
       <created>1653341840441</created>
@@ -215,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653343807910</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="end img_lab">
+      <created>1653392477448</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653392477448</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +281,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="add imgShift" />
     <MESSAGE value="start" />
-    <option name="LAST_COMMIT_MESSAGE" value="start" />
+    <MESSAGE value="end img_lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="end img_lab" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TI$module.coverage" NAME="module Coverage Results" MODIFIED="1653380950381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kura_imgWithShift_lab" />
