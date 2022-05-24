@@ -1,46 +1,37 @@
-def get_circle(sumators):
-    d = {format(a, '03b'): '' for a in range(8)}
-    for i in d:
-        for j in sumators:
-            d[i] += str(int(i[int(j[0]) - 1]) ^ int(i[int(j[1]) - 1]))
-    return d
+from random import randint
 
+CHUNK_LENGTH = 8
 
-def text_to_bits(text, encoding='utf-8', errors='surrogatepass'):
-    bits = bin(int.from_bytes(text.encode(encoding, errors), 'big'))[2:]
-    return bits.zfill(8 * ((len(bits) + 7) // 8))
+assert not CHUNK_LENGTH % 8
 
+CHECK_BITS = [i for i in range(1, CHUNK_LENGTH + 1) if not i & (i - 1)]
 
-def text_from_bits(bits, encoding='utf-8', errors='surrogatepass'):
-    n = int(bits, 2)
-    return n.to_bytes((n.bit_length() + 7) // 8, 'big').decode(encoding, errors) or '\0'
+def randomError(r, g, b):
+    r = list(bin(r)[2:].rjust(8, '0'))
+    g = list(bin(g)[2:].rjust(8, '0'))
+    b = list(bin(b)[2:].rjust(8, '0'))
 
-
-def coding(txt, sumators):
-    txt2b = text_to_bits(txt)
-    d = get_circle(sumators)
-
-    shift_code = ''
-    temp1 = '000'
-    for i in txt2b:
-        temp = i + temp1
-        shift_code += d[temp[:3:]]
-        temp1 = temp[:2:]
-
-    return shift_code
-
-
-def encoding(shift_code, sumators):
-    d = get_circle(sumators)
-    encode = ''
-    temp = '000'
-    for i in range(0, len(shift_code), len(sumators)):
-        if int(d[('1' + temp)[:3]]) ^ int(shift_code[i:i + len(sumators)]) == 0:
-            encode += '1'
-            temp = ('1' + temp)[:3]
+    for i in range(2):
+        t = randint(0, 7)
+        if r[t] == "0":
+            r[t] = '1'
         else:
-            encode += '0'
-            temp = ('0' + temp)[:3]
+            r[t] = '0'
 
-    encode = text_from_bits(encode)
-    return encode
+        t = randint(0, 7)
+        if g[t] == "0":
+            g[t] = '1'
+        else:
+            g[t] = '0'
+
+        t = randint(0, 7)
+        if b[t] == "0":
+            b[t] = '1'
+        else:
+            b[t] = '0'
+
+    r = int(''.join(r), 2)
+    g = int(''.join(g), 2)
+    b = int(''.join(b), 2)
+
+    return r, g, b
